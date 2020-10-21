@@ -1,0 +1,44 @@
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #FFFFFF;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --special-yellow: #F7E296;
+  --special-green: #91C92F;
+  --special-yellow-dark: #F0C52E;
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-60: rgba(255, 255, 255, 0.6);
+}
+
+/* global */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.page-footer {
+  background-color: var(--basic-dark)
+}

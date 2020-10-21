@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header container">
@@ -12,20 +14,20 @@
         </a>
         <div class="search-form-wrapper">
           <form action="https://echo.htmlacademy.ru" method="get">
-            <label for="site-search">Поиск по сайту</label>
+            <label class="visually-hidden" for="site-search">Поиск по сайту</label>
             <input type="search" name="site-search" id="site-search" placeholder="Поиск по сайту">
             <button type="submit">Найти</button>
           </form>
         </div>
         <ul class="user-nav">
           <li>
-            <a class='user-nav-item login-link' href="">Войти</a>
+            <a class="user-nav-item login-link" href="">Войти</a>
           </li>
           <li>
-            <a class='user-nav-item compare-link' href="">Сравнить</a>
+            <a class="user-nav-item compare-link" href="">Сравнить</a>
           </li>
           <li>
-            <a class='user-nav-item basket-link' href="">Корзина</a>
+            <a class="user-nav-item basket-link" href="">Корзина</a>
           </li>
         </ul>
         <a class="" href="">Каталог товаров</a>
@@ -46,7 +48,7 @@
               <a class="header-catalog-link" href="">Виртуальная реальность</a>
             </li>
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="">Моноподы для селфи</a>
+              <a class="header-catalog-link" href="catalog.html">Моноподы для селфи</a>
             </li>
             <li class="header-catalog-item">
               <a class="header-catalog-link" href="">Экшн-камеры</a>
@@ -234,8 +236,53 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-top">
+          <ul class="user-nav">
+            <li>
+              <a class="user-nav-item login-link" href="">Войти</a>
+            </li>
+            <li>
+              <a class="user-nav-item compare-link" href="">Сравнить</a>
+            </li>
+            <li>
+              <a class="user-nav-item basket-link" href="">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-center">
+          <p>г. Москва, ул. Строителей, 15</p>
+          <ul class="site-nav">
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="">Доставка</a>
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="">Гарантия</a>
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link" href="">Контакты</a>
+            </li>
+          </ul>
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-social">
+            <a class="social-button" href="">
+              <img src="img/facebook-icon.svg" width="32" height="32" alt="Ссылка на аккаунт в Facebook">
+            </a>
+            <a class="social-button" href="">
+              <img src="img/instagram-icon.svg" width="32" height="32" alt="Ссылка на аккаунт в Instagram">
+            </a>
+            <a class="social-button" href="">
+              <img src="img/twitter-icon.svg" width="32" height="32" alt="Ссылка на аккаунт в Twitter">
+            </a>
+          </div>
+          <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/html-logo.svg" width="27" height="34" alt="Ссылка на интенсив HTML Academy">
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
