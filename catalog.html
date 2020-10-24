@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/main-header-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
+      </a>
       <nav class="main-nav">
-        <a class="main-header-logo">
-          <img src="img/main-header-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
-        </a>
         <div class="search-form-wrapper">
           <form action="https://echo.htmlacademy.ru" method="get">
             <label for="site-search">Поиск по сайту</label>
@@ -19,7 +20,7 @@
             <button type="submit">Найти</button>
           </form>
         </div>
-        <ul class="user-nav">
+        <ul class="user-nav-list">
           <li>
             <a class="user-nav-item user-link" href="">Валентин Петухов</a>
           </li>
@@ -34,7 +35,7 @@
           </li>
         </ul>
         <a class="" href="">Каталог товаров</a>
-        <ul class="site-nav">
+        <ul class="site-nav-list">
           <li class="site-nav-item">
             <a class="site-nav-link" href="">Доставка</a>
           </li>
@@ -169,11 +170,11 @@
               <li class="catalog-item">
                 <div class="item-top">
                   <img src="img/catalog-item-1.png" width="360" height="380" alt="Любительская селфи-палка">
-                  <div class="item-top-hover">
+                  <div class="item-top-overlay">
                     <button class="button" type="button" aria-label="Добавить товар в корзину">В корзину</button>
                     <button type="button" aria-label="Добавить товар в список для сравнения">Добавить к сравнению</button>
                   </div>
-                  <img class="catalog-new-item not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
+                  <img class="not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                 </div>
                 <div class="item-bottom">
                   <a class="catalog-item-link" href="">Любительская селфи-палка</a>
@@ -183,11 +184,11 @@
               <li class="catalog-item">
                 <div class="item-top">
                   <img src="img/catalog-item-2.png" width="360" height="380" alt="Профессиональная селфи-палка">
-                  <div class="item-top-hover">
+                  <div class="item-top-overlay">
                     <button class="button" type="button" aria-label="Добавить товар в корзину">В корзину</button>
                     <button type="button" aria-label="Добавить товар в список для сравнения">Добавить к сравнению</button>
                   </div>
-                  <img class="catalog-new-item not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
+                  <img class="not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                 </div>
                 <div class="item-bottom">
                   <a class="catalog-item-link" href="">Профессиональная селфи-палка</a>
@@ -197,11 +198,11 @@
               <li class="catalog-item">
                 <div class="item-top">
                   <img src="img/catalog-item-3.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  <div class="item-top-hover">
+                  <div class="item-top-overlay">
                     <button class="button" type="button" aria-label="Добавить товар в корзину">В корзину</button>
                     <button type="button" aria-label="Добавить товар в список для сравнения">Добавить к сравнению</button>
                   </div>
-                  <img class="catalog-new-item not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
+                  <img class="not-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                 </div>
                 <div class="item-bottom">
                   <a class="catalog-item-link" href="">Непотопляемая селфи-палка</a>
@@ -211,11 +212,11 @@
               <li class="catalog-item">
                 <div class="item-top">
                   <img src="img/catalog-item-4.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  <div class="item-top-hover">
+                  <div class="item-top-overlay">
                     <button class="button" type="button" aria-label="Добавить товар в корзину">В корзину</button>
                     <button type="button" aria-label="Добавить товар в список для сравнения">Добавить к сравнению</button>
                   </div>
-                  <img class="catalog-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
+                  <img class="not-new-item catalog-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                 </div>
                 <div class="item-bottom">
                   <a class="catalog-item-link" href="">Селфи-палка «Следуй за мной»</a>
@@ -227,13 +228,13 @@
               <button type="button">Назад</button>
               <ul class="page-numbers-list">
                 <li class="page-numbers-item">
-                  <a class="page-numbers-item current-page" href="">1</a>
+                  <a class="page-numbers-link current-page" href="">1</a>
                 </li>
                 <li class="page-numbers-item">
-                  <a class="page-numbers-item" href="">2</a>
+                  <a class="page-numbers-link" href="">2</a>
                 </li>
                 <li class="page-numbers-item">
-                  <a class="page-numbers-item" href="">3</a>
+                  <a class="page-numbers-link" href="">3</a>
                 </li>
               </ul>
               <button type="button">Вперед</button>
@@ -245,7 +246,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="footer-top">
-          <ul class="user-nav">
+          <ul class="user-nav-list">
             <li>
               <a class="user-nav-item user-link" href="">Валентин Петухов</a>
             </li>
@@ -262,7 +263,7 @@
         </div>
         <div class="footer-center">
           <p>г. Москва, ул. Строителей, 15</p>
-          <ul class="site-nav">
+          <ul class="site-nav-list">
             <li class="site-nav-item">
               <a class="site-nav-link" href="">Доставка</a>
             </li>
