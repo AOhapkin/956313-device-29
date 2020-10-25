@@ -87,3 +87,23 @@ writeUsForm.addEventListener("submit", function(evt) {
     localStorage.setItem("user-mail", modalInputEmail.value);
   }
 });
+
+// promo slider
+
+let promoSlides = document.querySelectorAll(".promo-list-item");
+let promoControls = document.querySelectorAll(".promo-slider-button")
+
+var clickHandler = function (control, slide) {
+  control.addEventListener("click", function() {
+    for (var i=0; i < promoSlides.length; i++) {
+      promoSlides[i].classList.remove("current-promo-item");
+      promoControls[i].classList.remove("current-slider-button");
+    }
+    slide.classList.add("current-promo-item");
+    control.classList.add("current-slider-button");
+  });
+}
+
+for (var i=0; i<promoSlides.length; i++){
+  clickHandler(promoControls[i], promoSlides[i]);
+}
