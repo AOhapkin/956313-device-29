@@ -91,9 +91,9 @@ writeUsForm.addEventListener("submit", function(evt) {
 // promo slider
 
 let promoSlides = document.querySelectorAll(".promo-list-item");
-let promoControls = document.querySelectorAll(".promo-slider-button")
+let promoControls = document.querySelectorAll(".promo-slider-button");
 
-var clickHandler = function (control, slide) {
+var clickHandlerPromo = function (control, slide) {
   control.addEventListener("click", function() {
     for (var i=0; i < promoSlides.length; i++) {
       promoSlides[i].classList.remove("current-promo-item");
@@ -105,5 +105,24 @@ var clickHandler = function (control, slide) {
 }
 
 for (var i=0; i<promoSlides.length; i++){
-  clickHandler(promoControls[i], promoSlides[i]);
+  clickHandlerPromo(promoControls[i], promoSlides[i]);
+}
+
+let serviceButtons = document.querySelectorAll(".services-button");
+let serviceCards = document.querySelectorAll(".services-cards-item");
+
+var clickHandlerService = function (control, slide) {
+  control.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    for (var i=0; i < promoSlides.length; i++) {
+      serviceCards[i].classList.remove("current-services-cards-item");
+      serviceButtons[i].classList.remove("current-services-button");
+    }
+    slide.classList.add("current-services-cards-item");
+    control.classList.add("current-services-button");
+  });
+}
+
+for (var i=0; i<serviceCards.length; i++){
+  clickHandlerService(serviceButtons[i], serviceCards[i]);
 }
