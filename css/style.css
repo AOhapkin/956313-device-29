@@ -415,7 +415,6 @@ a {
 }
 
 .promo-list-item {
-  position: relative;
   display: none;
   padding-top: 15px;
   grid-template-columns: 1fr 1fr;
