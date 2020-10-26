@@ -1,18 +1,21 @@
-let catalogToggle = document.querySelector(".catalog-togle");
-let catalogMenu = document.querySelector(".catalog-menu");
-
-// header catalog
-
-catalogToggle.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  catalogMenu.classList.toggle("catalog-menu-show");
-});
-
-// map
-
 let mapShowButton = document.querySelector(".map-show-button");
 let modalMap = document.querySelector(".modal-map");
 let mapClose = modalMap.querySelector(".modal-close");
+let writeUsShowButton = document.querySelector(".write-us-button");
+let modalWriteUs = document.querySelector(".modal-write-us");
+let writeUsClose = modalWriteUs.querySelector(".modal-close");
+let writeUsForm = modalWriteUs.querySelector(".modal-form");
+let modalInputName = writeUsForm.querySelector(".modal-input-name");
+let modalInputEmail = writeUsForm.querySelector(".modal-input-email");
+let modalTextarea = writeUsForm.querySelector(".modal-textarea-message");
+let promoSlides = document.querySelectorAll(".promo-list-item");
+let promoControls = document.querySelectorAll(".promo-slider-button");
+let serviceButtons = document.querySelectorAll(".services-button");
+let serviceCards = document.querySelectorAll(".services-cards-item");
+let isStorageSupport = true;
+let storage = "";
+
+// map
 
 mapShowButton.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -25,17 +28,6 @@ mapClose.addEventListener("click", function(evt) {
 });
 
 // write us
-
-let writeUsShowButton = document.querySelector(".write-us-button");
-let modalWriteUs = document.querySelector(".modal-write-us");
-let writeUsClose = modalWriteUs.querySelector(".modal-close");
-let writeUsForm = modalWriteUs.querySelector(".modal-form");
-let modalInputName = writeUsForm.querySelector(".modal-input-name");
-let modalInputEmail = writeUsForm.querySelector(".modal-input-email");
-let modalTextarea = writeUsForm.querySelector(".modal-textarea-message");
-
-let isStorageSupport = true;
-let storage = "";
 
 try {
   storage = localStorage.getItem("number-adults");
@@ -78,7 +70,6 @@ window.addEventListener("keydown", function(evt) {
 writeUsForm.addEventListener("submit", function(evt) {
   if (!modalInputName.value || !modalInputEmail.value || !modalTextarea.value) {
     evt.preventDefault();
-    console.log("пустая форма");
     modalWriteUs.classList.remove("modal-error");
     writeUsForm.offsetWidth = writeUsForm.offsetWidth;
     modalWriteUs.classList.add("modal-error");
@@ -89,9 +80,6 @@ writeUsForm.addEventListener("submit", function(evt) {
 });
 
 // promo slider
-
-let promoSlides = document.querySelectorAll(".promo-list-item");
-let promoControls = document.querySelectorAll(".promo-slider-button");
 
 var clickHandlerPromo = function (control, slide) {
   control.addEventListener("click", function() {
@@ -107,9 +95,6 @@ var clickHandlerPromo = function (control, slide) {
 for (var i=0; i<promoSlides.length; i++){
   clickHandlerPromo(promoControls[i], promoSlides[i]);
 }
-
-let serviceButtons = document.querySelectorAll(".services-button");
-let serviceCards = document.querySelectorAll(".services-cards-item");
 
 var clickHandlerService = function (control, slide) {
   control.addEventListener("click", function(evt) {

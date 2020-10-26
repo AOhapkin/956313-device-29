@@ -10,15 +10,15 @@
   <body class="page-body">
     <header class="main-header">
       <div class="container">
-        <a class="site-logo-link main-header-logo">
-          <img src="img/main-header-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
-        </a>
         <nav class="main-nav">
+          <a class="site-logo-link main-header-logo">
+            <img src="img/main-header-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
+          </a>
           <div class="search-form-wrapper">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
               <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-              <input class="search-form-input" type="search" name="site-search" id="site-search" placeholder="Поиск по сайту">
-              <button class="search-form-button" type="button">Найти</button>
+              <input class="search-form-input" type="search" name="site-search" id="site-search" placeholder="Поиск по сайту" required>
+              <button class="search-form-button" type="submit">Найти</button>
             </form>
           </div>
           <ul class="user-nav-list">
@@ -33,7 +33,35 @@
             </li>
           </ul>
           <div class="site-nav">
-            <a class="catalog-togle site-nav-caption" href="">Каталог товаров</a>
+            <div class="catalog-menu-wrapper">
+              <a class="catalog-togle site-nav-caption" href="">Каталог товаров</a>
+              <div class="catalog-menu">
+                <ul class="catalog-list">
+                  <li class="catalog-item">
+                    <a class="catalog-link" href="">Виртуальная реальность</a>
+                  </li>
+                  <li class="catalog-item">
+                    <a class="catalog-link" href="catalog.html">Моноподы для селфи</a>
+                  </li>
+                  <li class="catalog-item">
+                    <a class="catalog-link" href="">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="catalog-list">
+                  <li class="catalog-item">
+                    <a class="catalog-link" href="">Фитнес-браслеты</a>
+                  </li>
+                  <li class="catalog-item">
+                    <a class="catalog-link" href="">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="catalog-list">
+                  <li class="catalog-menu-item">
+                    <a class="catalog-link" href="">Квадрокоптер</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <ul class="site-nav-list">
               <li class="site-nav-item">
                 <a class="site-nav-link site-nav-caption" href="">Доставка</a>
@@ -46,32 +74,7 @@
               </li>
             </ul>
           </div>
-          <div class="catalog-menu">
-            <ul class="catalog-list">
-              <li class="catalog-item">
-                <a class="catalog-link" href="">Виртуальная реальность</a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-link" href="">Экшн-камеры</a>
-              </li>
-            </ul>
-            <ul class="catalog-list">
-              <li class="catalog-item">
-                <a class="catalog-link" href="">Фитнес-браслеты</a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-link" href="">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="catalog-list">
-              <li class="catalog-menu-item">
-                <a class="catalog-link" href="">Квадрокоптер</a>
-              </li>
-            </ul>
-          </div>
+
         </nav>
       </div>
     </header>
@@ -226,7 +229,7 @@
           </div>
         </div>
       </section>
-      <section class="logos-section container">
+      <section class="logos-section">
         <h2 class="visually-hidden">Производители наших товаров</h2>
         <ul class="logos-list">
           <li class="logos-list-item">

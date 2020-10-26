@@ -50,7 +50,7 @@ a {
   justify-content: center;
   margin: 0;
   padding: 9px 43px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -98,7 +98,7 @@ a {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 19px;
   height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -114,15 +114,25 @@ a {
 /* header */
 
 .main-header {
-  position: relative;
   color: var(--basic-black);
 }
 
+.main-nav {
+  position: relative;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, min-content);
+  background: linear-gradient(to bottom, var(--basic-white), var(--basic-white) 20px, var(--special-yellow) 20px, var(--special-yellow));
+}
+
 .main-header-logo {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 111px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-bottom: 11px;
+  display: block;
 }
 
 .site-logo-link:hover {
@@ -131,19 +141,6 @@ a {
 
 .site-logo-link:active {
   opacity: 0.3;
-}
-
-.main-nav {
-  position: relative;
-  margin-top: 20px;
-  padding-top: 28px;
-  padding-right: 60px;
-  padding-bottom: 20px;
-  padding-left: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, min-content);
-  background-color: var(--special-yellow);
 }
 
 .main-nav .search-form {
@@ -169,7 +166,7 @@ a {
   padding: 0;
   padding-left: 37px;
   width: 356px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -198,7 +195,7 @@ a {
 .search-form-button {
   margin: 0;
   padding: 15px 17px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -214,6 +211,18 @@ a {
   color: var(--basic-black);
   border-color: var(--basic-black);
   outline: none;
+}
+
+.search-form-button:hover,
+.search-form-input:focus ~ .search-form-button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.search-form-button:active,
+.search-form-input:focus ~ .search-form-button:active {
+  color: var(--white-30);
+  background-color: var(--basic-black);
 }
 
 .user-nav-list {
@@ -317,6 +326,7 @@ a {
 
 .site-nav .catalog-togle {
   position: relative;
+  align-self: flex-end;
   display: block;
   color: inherit;
 }
@@ -355,25 +365,28 @@ a {
   color: inherit;
 }
 
+.catalog-menu-wrapper {
+  position: relative;
+}
+
 .catalog-menu {
   position: absolute;
   z-index: 2;
   top: 100%;
   left: -60px;
-  padding-top: 12px;
+  padding-top: 31px;
   padding-bottom: 41px;
   padding-left: 60px;
   width: 1160px;
   grid-column-start: 1;
   grid-column-end: -1;
-  /* display: flex; */
   display: none;
   flex-wrap: wrap;
   justify-content: flex-start;
   background-color: var(--special-yellow);
 }
 
-.catalog-menu-show {
+.catalog-menu-wrapper:hover .catalog-menu {
   display: flex;
 }
 
@@ -412,6 +425,7 @@ a {
   position: relative;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom, var(--special-yellow), var(--special-yellow) 145px, var(--basic-white) 145px, var(--basic-white));
 }
 
 .promo-list-item {
@@ -419,18 +433,6 @@ a {
   padding-top: 15px;
   grid-template-columns: 1fr 1fr;
   grid-gap: 35px;
-}
-
-.promo-list::before {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1160px;
-  height: 145px;
-  background-color: var(--special-yellow);
 }
 
 .current-promo-item {
@@ -468,7 +470,7 @@ a {
   z-index: -1;
   top: -17px;
   left: 333px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 179px;
@@ -483,7 +485,7 @@ a {
   margin-bottom: 27px;
   padding: 0;
   width: 500px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -516,7 +518,7 @@ a {
 }
 
 .promo-table-item {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
@@ -530,7 +532,7 @@ a {
 
 .promo-table-bottom .promo-table-item {
   padding-top: 15px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -578,7 +580,7 @@ a {
 
 .popular-section {
   margin-bottom: 166px;
-  padding-top: 114px;
+  padding-top: 115px;
 }
 
 .popular-section-list {
@@ -607,7 +609,8 @@ a {
   color: var(--black-30);
 }
 
-.popular-section-link:active::before {
+.popular-section-link:active::before,
+.popular-section-link:active .popular-section-link-text {
   opacity: 0.3;
 }
 
@@ -667,7 +670,7 @@ a {
   position: absolute;
   left: 0;
   top: 198px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -682,17 +685,7 @@ a {
 
 .services-section {
   position: relative;
-  margin-bottom: 159px;
-}
-
-.services-section::before {
-  position: absolute;
-  content: "";
-  top: 100px;
-  z-index: 0;
-  width: 100%;
-  height: 90%;
-  background-color: var(--basic-grey-light);
+  background: linear-gradient(to bottom, var(--basic-white), var(--basic-white) 102px, var(--basic-grey-light) 102px, var(--basic-grey-light));;
 }
 
 .services-slider-wrapper {
@@ -793,7 +786,7 @@ a {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -815,6 +808,8 @@ a {
 
 .logos-section {
   margin-bottom: 86px;
+  padding-top: 159px;
+  background: linear-gradient(to bottom, var(--basic-grey-light), var(--basic-grey-light) 69px, var(--basic-white) 69px, var(--basic-white));
 }
 
 .logos-list {
@@ -822,7 +817,10 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1160px;
   margin: 0;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0;
   list-style: none;
 }
@@ -866,7 +864,7 @@ a {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -895,7 +893,7 @@ a {
   padding: 0;
   padding-top: 19px;
   list-style: none;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -928,7 +926,7 @@ a {
   width: max-content;
   margin-top: auto;
   padding: 9px 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1017,7 +1015,7 @@ a {
 }
 
 .page-footer .site-nav-link {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1168,7 +1166,7 @@ a {
 
 .modal-label {
   margin-bottom: 30px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1180,7 +1178,7 @@ a {
   width: 100%;
   margin-top: 10px;
   padding: 16px 20px 15px 20px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1204,7 +1202,7 @@ a {
 }
 
 .modal-input::placeholder {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1224,7 +1222,7 @@ a {
   height: 167px;
   margin-top: 10px;
   padding: 16px 20px 15px 20px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1235,7 +1233,7 @@ a {
 }
 
 .modal-textarea::placeholder {
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
