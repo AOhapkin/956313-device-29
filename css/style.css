@@ -240,11 +240,26 @@ a {
   margin-right: 18px;
 }
 
+.user-nav-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
 .user-nav-link {
   position: relative;
   display: block;
   padding-left: 43px;
   color: var(--basic-black);
+}
+
+.user-nav-link .logged {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
 }
 
 .user-nav-link::before {
@@ -272,6 +287,10 @@ a {
   width: 10px;
   height: 10px;
   background-image: url(../img/cart-icon.svg);
+}
+
+.user-nav-list .logout-link {
+  padding-left: 0;
 }
 
 .page-footer .login-link::before {
@@ -1298,3 +1317,5 @@ a {
 .modal-error {
   animation: error 0.6s;
 }
+
+/* CATALOG */
