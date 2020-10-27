@@ -1456,3 +1456,12 @@ a {
   padding-right: 4px;
   width: 52px;
 }
+
+.catalog-main {
+  background: linear-gradient(to right, var(--basic-grey-light), var(--basic-grey-light) 50%, var(--basic-white) 50%, var(--basic-white));
+}
+
+.catalog-main .container {
+  display: grid;
+  grid-template-columns: 328px 1fr;
+}
