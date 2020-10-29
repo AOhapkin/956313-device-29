@@ -5,13 +5,13 @@
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="main-header">
       <div class="container">
         <nav class="main-nav">
-          <a class="site-logo-link main-header-logo">
+          <a class="site-logo-link main-header-logo" href="index.html">
             <img src="img/main-header-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
           </a>
           <div class="search-form-wrapper">
@@ -103,8 +103,8 @@
               Фильтр:
             </div>
             <div class="catalog-sort">
+              <span class="sort-types-title">Сортировка:</span>
               <div class="sort-types">
-                <span class="sort-types-title">Сортировка:</span>
                 <a class="sort-type current-sort-type" href="">По цене</a>
                 <a class="sort-type" href="">По типу</a>
                 <a class="sort-type" href="">По популярности</a>
@@ -142,7 +142,7 @@
                       <div class="toggle toggle-max"></div>
                     </div>
                     <div class="price-controls">
-                      <label class="visually-hidden">Минимальная цена поиска</label>
+                      <label class="visually-hidden" for="min-price">Минимальная цена поиска</label>
                       <input class="min-price" type="text" name="min-price" id="min-price" placeholder="от 0" required>
                       <label class="visually-hidden" for="max-price">Максимальная цена поиска</label>
                       <input class="max-price" type="text" name="max-price" id="max-price" placeholder="до 5000" required>
@@ -196,8 +196,8 @@
                   <div class="item-top">
                     <img class="item-image" src="img/catalog-item-1.png" width="360" height="380" alt="Любительская селфи-палка">
                     <div class="item-top-hover">
-                      <a class="button" href="" type="button" aria-label="Добавить товар в корзину">В корзину</a>
-                      <a class="compare-button" href="" type="button">Добавить к сравнению</a>
+                      <a class="button" href="">В корзину</a>
+                      <a class="compare-button" href="">Добавить к сравнению</a>
                     </div>
                     <img class="regular-catalog-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                   </div>
@@ -210,8 +210,8 @@
                   <div class="item-top">
                     <img class="item-image" src="img/catalog-item-2.png" width="360" height="380" alt="Профессиональная селфи-палка">
                     <div class="item-top-hover">
-                      <a class="button" href="" type="button" aria-label="Добавить товар в корзину">В корзину</a>
-                      <a class="compare-button" href="" type="button">Добавить к сравнению</a>
+                      <a class="button" href="">В корзину</a>
+                      <a class="compare-button" href="">Добавить к сравнению</a>
                     </div>
                     <img class="regular-catalog-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                   </div>
@@ -224,8 +224,8 @@
                   <div class="item-top">
                     <img class="item-image" src="img/catalog-item-3.png" width="360" height="380" alt="Непотопляемая селфи-палка">
                     <div class="item-top-hover">
-                      <a class="button" href="" type="button" aria-label="Добавить товар в корзину">В корзину</a>
-                      <a class="compare-button" href="" type="button">Добавить к сравнению</a>
+                      <a class="button" href="">В корзину</a>
+                      <a class="compare-button" href="">Добавить к сравнению</a>
                     </div>
                     <img class="regular-catalog-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                   </div>
@@ -238,8 +238,8 @@
                   <div class="item-top">
                     <img class="item-image" src="img/catalog-item-4.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                     <div class="item-top-hover">
-                      <a class="button" href="" type="button" aria-label="Добавить товар в корзину">В корзину</a>
-                      <a class="compare-button" href="" type="button">Добавить к сравнению</a>
+                      <a class="button" href="">В корзину</a>
+                      <a class="compare-button" href="">Добавить к сравнению</a>
                     </div>
                     <img class="regular-catalog-item catalog-new-item" src="img/new-item-icon.svg" width="62" height="62" alt="Новый товар в каталоге">
                   </div>
@@ -272,7 +272,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="footer-top">
-          <a class="site-logo-link footer-logo">
+          <a class="site-logo-link footer-logo" href="index.html">
             <img src="img/footer-logo.svg" width="163" height="35" alt="Логотип магазина гаджетов Device">
           </a>
           <ul class="user-nav-list">
