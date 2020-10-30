@@ -2139,6 +2139,10 @@ a {
   display: none;
 }
 
+.filter-input:focus + .filter-input-label {
+  outline: 1px solid var(--basic-black);
+}
+
 .filter-form-button {
   padding: 9px 39px;
 }
