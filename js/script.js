@@ -81,9 +81,9 @@ writeUsForm.addEventListener("submit", function(evt) {
 
 // promo slider
 
-var clickHandlerPromo = function (control, slide) {
+let clickHandlerPromo = function (control, slide) {
   control.addEventListener("click", function() {
-    for (var i=0; i < promoSlides.length; i++) {
+    for (let i=0; i < promoSlides.length; i++) {
       promoSlides[i].classList.remove("current-promo-item");
       promoControls[i].classList.remove("current-slider-button");
     }
@@ -92,14 +92,14 @@ var clickHandlerPromo = function (control, slide) {
   });
 }
 
-for (var i=0; i<promoSlides.length; i++){
+for (let i=0; i<promoSlides.length; i++){
   clickHandlerPromo(promoControls[i], promoSlides[i]);
 }
 
-var clickHandlerService = function (control, slide) {
+let clickHandlerService = function (control, slide) {
   control.addEventListener("click", function(evt) {
     evt.preventDefault();
-    for (var i=0; i < promoSlides.length; i++) {
+    for (let i=0; i < promoSlides.length; i++) {
       serviceCards[i].classList.remove("current-services-cards-item");
       serviceButtons[i].classList.remove("current-services-button");
     }
@@ -108,6 +108,6 @@ var clickHandlerService = function (control, slide) {
   });
 }
 
-for (var i=0; i<serviceCards.length; i++){
+for (let i=0; i<serviceCards.length; i++){
   clickHandlerService(serviceButtons[i], serviceCards[i]);
 }
